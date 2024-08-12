@@ -8,7 +8,7 @@ const Home = () => {
   const [timer,setTimer]=useState(0);
   const [content,setContent]=useState('');
   const [link,setLink]=useState('');
-
+  const [loading,setLoading]=useState("Loading...");
 
   
   useEffect(()=>{
@@ -35,7 +35,7 @@ const Home = () => {
         setContent(data.content);
         setTimer(data.timer);
         setLink(data.link);
-
+        setLoading("WOOSH... ! Banner Gone !! Timer is up Or Visibility is OFF!!!");
         console.log(data);
       }
       fetch();
@@ -56,7 +56,7 @@ const Home = () => {
             <a href={link} target='_blank' className="btn btn-primary">Explore More</a>
           </div>
           <div className="col d-flex align-items-center justify-content-center m-5" style={{border:"20px solid white",borderRadius:"50%"}}>{timer}</div>
-      </div>: <div className='d-flex align-items-center justify-content-center' style={{height:"700px",backgroundColor:"Blue",color:"white",fontSize:"72px"}}>WOOSH... ! Banner Gone !! Timer is up !!!</div>
+      </div>: <div className='d-flex align-items-center justify-content-center' style={{height:"700px",backgroundColor:"Blue",color:"white",fontSize:"72px"}}>{loading}</div>
 }
     </div>
   )
