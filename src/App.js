@@ -14,7 +14,7 @@ function App() {
     path:"/internal",
     element:<Dashboard/>
   }
-])
+],{basename:"https://tuf-frontend-hve2.onrender.com"})
 
   return (
     <div className="App">
