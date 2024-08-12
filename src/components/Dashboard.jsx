@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { url } from '../url';
 import { useNavigate } from 'react-router-dom';
+import Nav from './Nav';
 
 const Dashboard = () => {
 
@@ -45,6 +46,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      <Nav/>
       <h1>Dashboard</h1>
 
       <div className="container">

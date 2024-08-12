@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import {url} from "../url";
+import Nav from './Nav';
 
 const Home = () => {
 
@@ -49,6 +50,7 @@ const Home = () => {
 
   return (
     <div>
+      <Nav/>
       {visibility?
       <div className="row" style={{height:"700px",backgroundColor:"black",color:"white",fontSize:"72px"}}>
           <div className="col d-flex flex-column align-items-center justify-content-center" >
