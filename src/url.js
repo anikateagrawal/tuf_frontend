@@ -1,0 +1,1 @@
+export const url="https://tuf-backend-rish.onrender.com";
