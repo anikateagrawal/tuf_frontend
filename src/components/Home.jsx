@@ -49,14 +49,14 @@ const Home = () => {
 
   return (
     <div>
-      {visibility&&
+      {visibility?
       <div className="row" style={{height:"700px",backgroundColor:"black",color:"white",fontSize:"72px"}}>
           <div className="col d-flex flex-column align-items-center justify-content-center" >
             <div>{content}</div>
             <a href={link} target='_blank' className="btn btn-primary">Explore More</a>
           </div>
           <div className="col d-flex align-items-center justify-content-center m-5" style={{border:"20px solid white",borderRadius:"50%"}}>{timer}</div>
-      </div>
+      </div>: <div className='d-flex align-items-center justify-content-center' style={{height:"700px",backgroundColor:"Blue",color:"white",fontSize:"72px"}}>WOOSH... ! Banner Gone !! Timer is up !!!</div>
 }
     </div>
   )
